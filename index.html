@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Destination</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover the Beauty of Hawaii</h1>
+            <p>Explore, Experience, and Enjoy!</p>
+            <a href="#highlights" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section id="highlights" class="highlights">
+        <h2>Why Visit Hawaii?</h2>
+        <div class="highlight-cards">
+            <div class="card">
+                <h3>Stunning Beaches</h3>
+                <p>Experience the pristine white sands and crystal-clear waters of Hawaii's famous beaches.</p>
+            </div>
+            <div class="card">
+                <h3>Volcanic Landscapes</h3>
+                <p>Explore the unique volcanic landscapes and lush greenery of Hawaii's islands.</p>
+            </div>
+            <div class="card">
+                <h3>Cultural Richness</h3>
+                <p>Immerse yourself in the rich cultural heritage and traditions of Hawaii.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Attractions Section -->
+    <section id="attractions" class="attractions">
+        <h2>Top Attractions in Hawaii</h2>
+        <div class="attraction-cards">
+            <div class="card">
+                <img src="Images/pic2 (3).jpg" alt="Attraction 1">
+                <h3>Waikiki Beach</h3>
+                <p>Discover the beauty of Waikiki Beach, known for its surf and sun.</p>
+            </div>
+            <div class="card">
+                <img src="Images/Haleakalā National Park.webp" alt="Attraction 2">
+                <h3>Haleakalā National Park</h3>
+                <p>Explore the stunning landscapes and wildlife of Haleakalā National Park.</p>
+            </div>
+            <div class="card">
+                <img src="Images/pearl.jpeg" alt="Attraction 3">
+                <h3>Pearl Harbor</h3>
+                <p>Remember history at Pearl Harbor, a landmark of World War II.</p>
+            </div>
+        </div>
+    </section>
+
+<!-- Accommodation Section -->
+<section id="accommodation" class="accommodation">
+    <h2>Accommodation Options</h2>
+    <div class="accommodation-cards">
+        <div class="card">
+            <h3>Turtle Bay Resort</h3>
+            <p>Luxury and comfort in the heart of Oahu's North Shore.</p>
+            <a href="https://example.com/book-turtle-bay" class="btn" target="_blank">Book Now</a>
+        </div>
+        <div class="card">
+            <h3>Mauna Kea Beach Hotel</h3>
+            <p>Enjoy a serene getaway at the iconic Mauna Kea Beach Hotel.</p>
+            <a href="https://example.com/book-mauna-kea" class="btn" target="_blank">Book Now</a>
+        </div>
+        <div class="card">
+            <h3>Airbnb Rentals</h3>
+            <p>Experience local hospitality with Airbnb rentals across Hawaii.</p>
+            <a href="https://example.com/book-airbnb" class="btn" target="_blank">Book Now</a>
+        </div>
+    </div>
+</section>
+
+<!-- Booking Section -->
+<section id="booking" class="booking">
+    <h2>Book Activities</h2>
+    <div class="booking-options">
+        <div class="booking-card">
+            <h3>Surf Lessons</h3>
+            <p>Learn to surf with professional instructors.</p>
+            <a href="https://example.com/book-surf-lessons" class="btn" target="_blank">Book Now</a>
+        </div>
+        <div class="booking-card">
+            <h3>Hiking Tours</h3>
+            <p>Explore Hawaii's trails and scenic landscapes.</p>
+            <a href="https://example.com/book-hiking-tours" class="btn" target="_blank">Book Now</a>
+        </div>
+        <div class="booking-card">
+            <h3>Helicopter Tours</h3>
+            <p>See Hawaii from above with breathtaking helicopter tours.</p>
+            <a href="https://example.com/book-helicopter-tours" class="btn" target="_blank">Book Now</a>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <h2>Explore Hawaii in Photos</h2>
+        <div class="gallery-images">
+            <img src="Images/pic2 (1).jpg" alt="Gallery Image 1">
+            <img src="Images/pic2 (2).jpg" alt="Gallery Image 2">
+            <img src="Images/pic2 (5).jpg" alt="Gallery Image 3">
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form action="submit_form.php" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone"  placeholder="Format: +20 123-456-789" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+    
+
+    <script src="scripts.js"></script>
+</body>
+</html>

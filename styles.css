@@ -1,0 +1,304 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: 
+        linear-gradient(rgba(15, 76, 117, 0.9), rgba(0, 198, 167, 0.9)),
+        linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));
+    background-blend-mode: multiply, normal;
+    color: white;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.btn {
+    background-color: #20C997;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.highlights, .attractions, .accommodation, .gallery, .contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.highlight-cards, .attraction-cards, .accommodation-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    background: rgba(255 255 255 / 20%);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.gallery-images img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-images img:hover {
+    transform: scale(1.1);
+}
+
+.contact form {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #20C997;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.btn:hover {
+    background-color: #189c84;
+}
+
+.accommodation, .booking {
+    text-align: center;
+    background-color: inherit;
+    padding: 50px 20px;
+}
+
+.accommodation h2, .booking h2 {
+    margin-bottom: 30px;
+}
+
+.accommodation-cards, .booking-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.booking-card {
+    width: calc(33.33% - 40px);
+    padding: 20px;
+    margin: 20px;
+    background-color: rgba(91 99 121 / 90%);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.booking-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.booking-card h3 {
+    margin-bottom: 10px;
+}
+
+.booking-card p {
+    margin-bottom: 20px; 
+}
+
+.booking-card .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #20C997;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.booking-card .btn:hover {
+    background-color: #1ba98e;
+}
+
+.accommodation {
+    text-align: center; 
+    background-color: inherit; 
+    padding: 50px 20px; 
+}
+
+.accommodation h2 {
+    margin-bottom: 30px; 
+}
+
+.accommodation-cards {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; 
+}
+
+.accommodation .card {
+    width: calc(33.33% - 40px);
+    padding: 20px;
+    margin: 20px;
+    background-color: rgba(91, 99, 121, 0.9); 
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.accommodation .card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.accommodation .card h3 {
+    margin-bottom: 10px; 
+}
+
+.accommodation .card p {
+    margin-bottom: 20px; 
+}
+
+.accommodation .card .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #20C997;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.accommodation .card .btn:hover {
+    background-color: #1ba98e;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: normal;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/*
+.gallery {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.gallery h2 {
+    margin-bottom: 30px;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+    overflow: hidden; 
+    background-color: #f1f1f1; 
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease; 
+}
+
+.slides img {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit:fill; 
+}
+
+a.prev, a.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+a.next {
+    right: 20px; 
+
+a.prev {
+    left: 20px; 
+}
+*/

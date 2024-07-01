@@ -1,0 +1,4 @@
+Create a navbar
+put some icons
+buttons for logging
+footer
