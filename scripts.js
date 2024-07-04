@@ -1,29 +1,51 @@
-// JavaScript to handle slideshow navigation
-let slideIndex = 0;
-const slides = document.querySelector('.slides');
-const slideWidth = document.querySelector('.slides img').clientWidth; // Get the width of each slide
+let currentScrollPosition = 0;
+const photoGalleryContainer = document.querySelector('.photo-gallery-container');
+const photoGallery = document.querySelector('.photo-gallery');
+const picWidth = document.querySelector('.pic').offsetWidth; // Width of one picture including padding
+const scrollAmount = picWidth * 4; // Scroll by 3 images
 
-function showSlides(index) {
-    slides.style.transform = `translateX(${-index * slideWidth}px)`;
+function updateArrows() {
+    const maxScrollPosition = photoGallery.scrollWidth - photoGalleryContainer.offsetWidth;
+    console.log(`Current Scroll Position: ${currentScrollPosition}`);
+    console.log(`Max Scroll Position: ${maxScrollPosition}`);
+
+    if (currentScrollPosition <= 0) {
+        document.querySelector('.left-arrow').style.display = 'none';
+    } else {
+        document.querySelector('.left-arrow').style.display = 'block';
+    }
+
+    if (currentScrollPosition >= maxScrollPosition) {
+        document.querySelector('.right-arrow').style.display = 'none';
+    } else {
+        document.querySelector('.right-arrow').style.display = 'block';
+    }
 }
 
-document.querySelector('.prev').addEventListener('click', () => {
-    if (slideIndex > 0) {
-        slideIndex--;
-    } else {
-        slideIndex = slides.children.length - 1;
+function scrollLeft() {
+    currentScrollPosition -= scrollAmount;
+    if (currentScrollPosition < 0) {
+        currentScrollPosition = 0;
     }
-    showSlides(slideIndex);
-});
+    alert('Left arrow clicked');
+    photoGallery.style.transform = `translateX(-${currentScrollPosition}px)`;
+    console.log(`Scroll Left - New Position: ${currentScrollPosition}`);
+    updateArrows();
+    alert('Left arrow clicked');
+}
 
-document.querySelector('.next').addEventListener('click', () => {
-    if (slideIndex < slides.children.length - 1) {
-        slideIndex++;
-    } else {
-        slideIndex = 0;
+function scrollRight() {
+    const maxScrollPosition = photoGallery.scrollWidth - photoGalleryContainer.offsetWidth;
+    currentScrollPosition += scrollAmount;
+    if (currentScrollPosition > maxScrollPosition) {
+        currentScrollPosition = maxScrollPosition;
     }
-    showSlides(slideIndex);
-});
+    photoGallery.style.transform = `translateX(-${currentScrollPosition}px)`;
+    console.log(`Scroll Right - New Position: ${currentScrollPosition}`);
+    updateArrows();
+}
 
-// Initial slideshow setup
-showSlides(slideIndex);
+// Initialize arrows visibility
+document.addEventListener('DOMContentLoaded', (event) => {
+    updateArrows();
+});
