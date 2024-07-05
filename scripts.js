@@ -1,8 +1,8 @@
 let currentScrollPosition = 0;
 const photoGalleryContainer = document.querySelector('.photo-gallery-container');
 const photoGallery = document.querySelector('.photo-gallery');
-const picWidth = document.querySelector('.pic').offsetWidth; // Width of one picture including padding
-const scrollAmount = picWidth * 4; // Scroll by 3 images
+const picWidth = document.querySelector('.pic').offsetWidth;
+const scrollAmount = picWidth * 4;
 
 function updateArrows() {
     const maxScrollPosition = photoGallery.scrollWidth - photoGalleryContainer.offsetWidth;
@@ -45,7 +45,17 @@ function scrollRight() {
     updateArrows();
 }
 
-// Initialize arrows visibility
 document.addEventListener('DOMContentLoaded', (event) => {
     updateArrows();
+});
+//------------------------navbar scrolling------------------------------------------
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });
